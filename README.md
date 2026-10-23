@@ -36,8 +36,10 @@ It runs in the menu bar and has no Dock icon.
 
 1. Download the latest `ProjectorHold.dmg` from [Releases](../../releases/latest).
 2. Open it and drag **Projector Hold** to **Applications**.
-3. Open Projector Hold. A screen icon appears in the menu bar.
-4. The first time you freeze, macOS asks for **Screen & System Audio Recording** permission. Turn on Projector Hold in System Settings, then choose **Restart Projector Hold** from its menu.
+3. Open Projector Hold. A welcome guide shows the shortcuts and a screen icon appears in the menu bar.
+4. In the guide, click **Allow Screen Recording…**, turn on ProjectorHold in System Settings, then click **Restart Projector Hold**. You can also turn on **Open Projector Hold when I log in** there.
+
+You can reopen the guide anytime from the menu bar icon → **Show Welcome Guide**.
 
 Blank works without any permission. Freeze needs Screen Recording to take its snapshot. Projector Hold doesn't record audio.
 
@@ -49,7 +51,7 @@ Projector Hold has no network access, analytics or accounts. The frozen picture 
 
 ## Support the project
 
-Projector Hold is free and open source. If it saves your presentations, you can pay what you want for it at [melvinardra.com](https://melvinardra.com). It helps keep the app updated.
+Projector Hold is free and open source. If it saves your presentations, you can pay what you want for it at [melvinardra.com](https://melvinardra.com), or from **Support Projector Hold ♥** in the app's menu. It helps keep the app updated.
 
 ## Build from source
 
