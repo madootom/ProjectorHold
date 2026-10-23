@@ -34,9 +34,10 @@ It runs in the menu bar and has no Dock icon.
 
 ## Install
 
-1. Download the latest `ProjectorHold.dmg` from [Releases](../../releases/latest).
+1. Download **[ProjectorHold.dmg](https://github.com/madootom/ProjectorHold/releases/latest/download/ProjectorHold.dmg)**.
 2. Open it and drag **Projector Hold** to **Applications**.
-3. Open Projector Hold. A welcome guide shows the shortcuts and a screen icon appears in the menu bar.
+3. Open Projector Hold. **First launch only:** if macOS says it can't verify the app, click **Done**, go to **System Settings → Privacy & Security**, click **Open Anyway** next to "Projector Hold was blocked", and enter your password. This step goes away once the app is notarized by Apple.
+   A welcome guide then shows the shortcuts, and a screen icon appears in the menu bar.
 4. In the guide, click **Allow Screen Recording…**, turn on ProjectorHold in System Settings, then click **Restart Projector Hold**. You can also turn on **Open Projector Hold when I log in** there.
 
 You can reopen the guide anytime from the menu bar icon → **Show Welcome Guide**.
