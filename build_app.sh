@@ -8,13 +8,17 @@ cd "$(dirname "$0")"
 VERSION="${VERSION:-1.0.0}"
 BUNDLE_ID="com.melvinardra.ProjectorHold"
 
-swift build -c release
-BIN_PATH="$(swift build -c release --show-bin-path)/ProjectorHold"
+# Build for Apple Silicon and Intel, then combine into one universal binary.
+BINARIES=()
+for triple in arm64-apple-macosx14.0 x86_64-apple-macosx14.0; do
+    swift build -c release --triple "$triple"
+    BINARIES+=("$(swift build -c release --triple "$triple" --show-bin-path)/ProjectorHold")
+done
 
 APP="ProjectorHold.app"
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
-cp "$BIN_PATH" "$APP/Contents/MacOS/ProjectorHold"
+lipo -create -output "$APP/Contents/MacOS/ProjectorHold" "${BINARIES[@]}"
 cp Resources/AppIcon.icns "$APP/Contents/Resources/AppIcon.icns"
 
 cat > "$APP/Contents/Info.plist" <<PLIST

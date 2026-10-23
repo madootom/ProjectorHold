@@ -22,8 +22,7 @@ NOTARY_PROFILE="${NOTARY_PROFILE:-projectorhold-notary}"
 export VERSION="${VERSION:-1.0.0}"
 
 APP="ProjectorHold.app"
-DIST="dist"
-DMG="$DIST/ProjectorHold-$VERSION.dmg"
+DMG="dist/ProjectorHold.dmg"
 
 ./build_app.sh
 
@@ -32,12 +31,7 @@ codesign --force --timestamp --options runtime --sign "$DEVELOPER_ID" "$APP"
 codesign --verify --strict --verbose=2 "$APP"
 
 echo "Creating $DMG"
-rm -rf "$DIST"
-mkdir -p "$DIST/staging"
-cp -R "$APP" "$DIST/staging/"
-ln -s /Applications "$DIST/staging/Applications"
-hdiutil create -volname "Projector Hold" -srcfolder "$DIST/staging" -ov -format UDZO "$DMG"
-rm -rf "$DIST/staging"
+./scripts/make_dmg.sh
 codesign --force --timestamp --sign "$DEVELOPER_ID" "$DMG"
 
 echo "Submitting for notarization (this usually takes a few minutes)"
