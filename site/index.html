@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projector Hold for Mac</title>
+<meta name="description" content="Freeze or blank your AirPlay TV or projector while you keep working on your Mac. Free download.">
+<meta property="og:title" content="Projector Hold for Mac">
+<meta property="og:description" content="Freeze or blank your AirPlay TV while you keep working on your Mac.">
+<meta property="og:image" content="icon.png">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --text: #141a33;
+    --muted: #5b6380;
+    --line: #e2e5ef;
+    --accent: #3f55e6;
+    --accent-text: #ffffff;
+    --key: #eef0f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1222;
+      --surface: #171c32;
+      --text: #eef0fa;
+      --muted: #a2a9c6;
+      --line: #2a3150;
+      --accent: #6a7cff;
+      --accent-text: #0e1222;
+      --key: #242b48;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 16px 72px; }
+  header { text-align: center; }
+  header img { width: 112px; height: 112px; }
+  h1 { font-size: 40px; line-height: 1.15; margin: 14px 0 10px; letter-spacing: -0.02em; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0 auto 28px; max-width: 34ch; }
+  .download {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--accent-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 28px;
+    border-radius: 12px;
+  }
+  .download:hover { filter: brightness(1.08); }
+  .fine { color: var(--muted); font-size: 14px; margin-top: 12px; }
+  section {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 24px;
+  }
+  h2 { font-size: 21px; margin: 0 0 14px; }
+  .shortcut { display: flex; align-items: center; gap: 16px; padding: 8px 0; flex-wrap: wrap; }
+  .keys { display: flex; gap: 4px; }
+  kbd {
+    display: inline-block;
+    min-width: 32px;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 7px;
+    background: var(--key);
+    border: 1px solid var(--line);
+    font: 600 16px -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  ol { margin: 0; padding-left: 22px; }
+  ol li { margin-bottom: 10px; }
+  .note { color: var(--muted); font-size: 15px; margin: 12px 0 0; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 36px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="">
+    <h1>Projector Hold</h1>
+    <p class="lede">Freeze or blank your AirPlay TV or projector while you keep working on your Mac.</p>
+    <a class="download" href="https://github.com/madootom/ProjectorHold/releases/latest/download/ProjectorHold.dmg">Download for Mac</a>
+    <p class="fine">Free · macOS 14 Sonoma or later · Apple Silicon and Intel</p>
+  </header>
+
+  <section>
+    <h2>The projector buttons AirPlay is missing</h2>
+    <div class="shortcut">
+      <span class="keys"><kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>F</kbd></span>
+      <span><strong>Freeze</strong> the TV on the current picture. Press again to go live.</span>
+    </div>
+    <div class="shortcut">
+      <span class="keys"><kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>B</kbd></span>
+      <span><strong>Blank</strong> the TV to black. Press again to show it.</span>
+    </div>
+    <p class="note">While the TV is held, your Mac's screen stays live, so you can find the next slide or answer a message without the room seeing. Works with screen mirroring too.</p>
+  </section>
+
+  <section>
+    <h2>Install in a minute</h2>
+    <ol>
+      <li>Open <strong>ProjectorHold.dmg</strong> and drag <strong>Projector Hold</strong> into <strong>Applications</strong>.</li>
+      <li>Open Projector Hold from Applications.</li>
+      <li><strong>First launch only:</strong> if macOS says it can't verify the app, click <strong>Done</strong>. Then go to <strong>System Settings → Privacy &amp; Security</strong>, click <strong>Open Anyway</strong> next to “Projector Hold was blocked”, and enter your password.</li>
+      <li>The welcome guide opens. Click <strong>Allow Screen Recording…</strong>, turn on ProjectorHold, then click <strong>Restart Projector Hold</strong>.</li>
+    </ol>
+    <p class="note">After that, Projector Hold lives in the menu bar as a small screen icon, with the same controls.</p>
+  </section>
+
+  <section>
+    <h2>Private by design</h2>
+    <p style="margin:0">No accounts, no analytics, no network access. The frozen picture stays in memory only while the TV is frozen and is never saved or sent anywhere. Projector Hold doesn't record audio.</p>
+  </section>
+
+  <footer>
+    Free and open source · <a href="https://github.com/madootom/ProjectorHold">Source on GitHub</a> · Made by Melvin Tom
+  </footer>
+</main>
+</body>
+</html>
