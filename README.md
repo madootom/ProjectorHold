@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><b>Download for macOS</b></a> ·
-  <a href="https://melvinardra.com">melvinardra.com</a>
+  <a href="https://github.com/madootom/ProjectorHold/releases/latest/download/ProjectorHold.dmg"><b>Download for macOS</b></a> ·
+  <a href="https://projectorhold.vercel.app">Website</a>
 </p>
 
 ---
